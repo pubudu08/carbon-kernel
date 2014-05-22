@@ -1,6 +1,9 @@
 package org.wso2.carbon.shell.console.base;
 
-
+/**
+ * Used to denote a class represents a command which is executable within a shell/scope or as a
+ * command line process.
+ */
 public @interface Command {
 
     /**
@@ -17,7 +20,7 @@ public @interface Command {
 
     /**
      * This will return description of the command and
-     * will help the generate -help
+     * to generate descriptive -help
      * @return
      */
     String description();
