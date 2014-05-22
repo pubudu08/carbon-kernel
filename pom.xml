@@ -7,6 +7,9 @@
     <artifactId>carbon</artifactId>
     <packaging>pom</packaging>
     <version>5.0.0-SNAPSHOT</version>
+    <modules>
+        <module>modules/shell</module>
+    </modules>
     <name>WSO2 Carbon Kernel - Parent Pom</name>
     <description>WSO2 Carbon Kernel with all its dependents, components, features
     </description>
@@ -750,6 +753,16 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${version.javax.servlet.api}</version>
             </dependency>
+            <dependency>
+                <groupId>jline</groupId>
+                <artifactId>jline</artifactId>
+                <version>${jline.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -894,6 +907,9 @@
         <maven.projectinforeportsplugin.version>2.4</maven.projectinforeportsplugin.version>
         <maven.incrementalbuildplugin.version>1.2</maven.incrementalbuildplugin.version>
 
+        <!-- JLine Terminal-->
+        <jline.version>2.11</jline.version>
+
         <!--Other dependency versions -->
         <apache.felix.scr.ds-annotations.version>1.2.4</apache.felix.scr.ds-annotations.version>
         <carbon.p2.plugin.version>1.5.4-SNAPSHOT</carbon.p2.plugin.version>
@@ -911,5 +927,6 @@
         <version.jacoco>0.6.4.201312101107</version.jacoco>
         <version.jetty.server>8.1.10.v20130312</version.jetty.server>
         <version.javax.servlet.api>3.0.1</version.javax.servlet.api>
+        <commons.io.version>2.4</commons.io.version>
     </properties>
 </project>
