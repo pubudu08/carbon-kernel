@@ -80,6 +80,7 @@ public class Console implements Runnable{
         thread = Thread.currentThread();
         running = true;
         pipe.start();
+        welcomeMsg();
         while (running) {
             try {
                 String command = readAndParseCommand();
